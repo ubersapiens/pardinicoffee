@@ -362,7 +362,7 @@ there.
 /* Larger than mobile */
 @media (min-width: 400px) {}
 
-@media (max-width: 400px) { 
+@media (max-width: 550px) { 
   #buy_button {
     visibility:hidden;
   }
