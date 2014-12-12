@@ -362,6 +362,21 @@ there.
 /* Larger than mobile */
 @media (min-width: 400px) {}
 
+@media (max-width: 400px) { 
+  #buy_button {
+    visibility:hidden;
+  }
+  #mobile_row {
+    margin-top:-4rem;
+  } 
+  .imgWrap {
+    margin-left:-8rem;
+  }
+  #imgWrap_exception {
+    margin-left:0;
+  }
+}
+
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {}
 
