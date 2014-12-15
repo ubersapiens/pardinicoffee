@@ -23,7 +23,7 @@ class Web < Sinatra::Base
      :port                 => '587',
      :enable_starttls_auto => true,
      :user_name            => 'ubersapiens@gmail.com',
-     :password             => 'Jfp160885',
+     :password             => 'x',
      :authentication       => :plain, 
      :domain               => "pardinicoffee.herokuapp.com" 
      } 
