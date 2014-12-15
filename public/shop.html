@@ -16,7 +16,7 @@
       <div class="one-half column" >
         <h4 class="hero-heading" style="font-family: 'Helvetica Neue', sans-serif; font-size: 3.5em; font-weight: 300;">Shop.</h4>
         <p style="font-family: 'Helvetica Neue', sans-serif; font-size: 1.8em; font-weight: 300;">
-          We are a <strong>hand-crafted service</strong> involved in the whole <strong>tree to cup</strong> process. Buy your first bag and the roaster will <strong>personally deliver it</strong> to your door. Buy two bags or more he will prepare you a <strong>delicious aeropress</strong> while telling you the coffee's story.
+          We are a <strong>hand-crafted service</strong> involved in the whole <strong>tree to cup</strong> process. Buy your first bag and the roaster will <strong>personally deliver it</strong> to your door. Buy two bags or more and he will prepare you a <strong>delicious aeropress</strong> while telling you the coffee's story.
         </p>
         <table class="u-full-width">
           <thead>
@@ -45,8 +45,28 @@
             </tr>
           </tbody>
         </table>
-        <a class="button button-primary" href="/shop.html">Buy coffee</a>
-        <br>
+        <p style="font-family: 'Helvetica Neue', sans-serif; font-size: 1.8em; font-weight: 300;">
+          We are taking our first orders.
+        </p>
+        <form action="/shop.html" method="post">
+          <fieldset>
+            <ol style="list-style:none;">
+              <li>
+                <label for="name">Name:</label>
+                <input class="text" name="name" type="text" style="padding-right:6em;"></input>
+              </li>
+              <li>
+                <label for="mail">Email:</label>
+                <input class="text" name="mail" type="text" style="padding-right:6em;"></input>
+              </li>
+              <li>
+                <label for="address">Address:</label>
+                <input class="text" name="address" type="text" style="padding-right:10em;"></input>
+              </li>
+            </ol>
+            <input class="button button-primary" type="submit" value="Buy coffee"></input>
+          </fieldset>
+        </form>
         <a class="button button-primary" href="/index.html" style="background-color:white; color: #3d3d3d; border-color: #3d3d3d;">Back to main</a>
       </div>
       <div class="section values">
