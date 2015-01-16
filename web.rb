@@ -1,5 +1,7 @@
+require 'rubygems'
 require 'sinatra/base'
 require 'pony'
+require 'net/smtp'
 
 class Web < Sinatra::Base
 
@@ -7,7 +9,28 @@ class Web < Sinatra::Base
     set :public_folder, 'public'
   end
 
-  get "/" do
+  get '/' do
     redirect '/index.html'
+  end
+
+
+  post '/shop.html' do 
+    require 'pony'
+    Pony.mail(
+      :from => params[:email],
+      :to => 'pardinicoffee@gmail.com',
+      :subject => "RE: Coffee needed by " + params[:name],
+      :body => params[:coffee] + params[:bags],
+      :via => :smtp,
+      :via_options => { 
+        :address              => 'smtp.gmail.com',
+        :port           => '587',
+        :enable_starttls_auto => true, 
+        :user_name => ENV['GMAIL_USERNAME'],
+        :password => ENV['GMAIL_PASSWORD'],
+        :authentication       => :plain, 
+        :domain               => 'localhost.localdomain'
+      })
+    redirect '/index.html' 
   end
 end
