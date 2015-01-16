@@ -24,11 +24,7 @@ class Web < Sinatra::Base
       :via => :smtp,
       :via_options => { 
         :address              => 'smtp.gmail.com',
-        :port           => '587',
-        :enable_starttls_auto => true, 
-        :user_name => ENV['GMAIL_USERNAME'],
-        :password => ENV['GMAIL_PASSWORD'],
-        :authentication       => :plain, 
+        :port           => '587', 
         :domain               => 'localhost.localdomain'
       })
     redirect '/index.html' 
