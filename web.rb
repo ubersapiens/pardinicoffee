@@ -31,6 +31,6 @@ class Web < Sinatra::Base
         :authentication       => :plain, 
         :domain               => 'localhost.localdomain'
       })
-    redirect '/thankyou.html' 
+    redirect '/index.html' 
   end
 end
