@@ -24,7 +24,7 @@ class Web < Sinatra::Base
       :via => :smtp,
       :via_options => { 
         :address              => 'smtp.live.com',
-        :port           => '465',
+        :port           => '25',
         :enable_starttls_auto => true, 
         :user_name => ENV['HOTMAIL_USERNAME'],
         :password => ENV['HOTMAIL_PASSWORD'],
