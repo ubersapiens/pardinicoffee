@@ -18,16 +18,16 @@ class Web < Sinatra::Base
     require 'pony'
     Pony.mail(
       :from => params[:email],
-      :to => 'jf_pardini@hotmail.com',
+      :to => 'pardinicoffee@gmail.com',
       :subject => "RE: Coffee needed by " + params[:name],
       :body => params[:name] + " liked the following coffee: " + params[:coffee] + ". And would like " + params[:bags] + " bags delivered to them.",
       :via => :smtp,
       :via_options => { 
-        :address              => 'smtp.live.com',
-        :port           => '25',
+        :address              => 'smtp.gmail.com',
+        :port           => '587',
         :enable_starttls_auto => true, 
-        :user_name => ENV['HOTMAIL_USERNAME'],
-        :password => ENV['HOTMAIL_PASSWORD'],
+        :user_name => ENV['GMAIL_USERNAME'],
+        :password => ENV['GMAIL_PASSWORD'],
         :authentication       => :plain, 
         :domain               => 'localhost.localdomain'
       })
