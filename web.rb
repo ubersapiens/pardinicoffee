@@ -20,7 +20,7 @@ class Web < Sinatra::Base
       :from => params[:email],
       :to => 'pardinicoffee@gmail.com',
       :subject => "RE: Coffee needed by " + params[:name],
-      :body => params[:coffee] + params[:bags],
+      :body => params[:name] + " liked the following coffee: " + params[:coffee] + ". And would like " + params[:bags] + " bags delivered to them.",
       :via => :smtp,
       :via_options => { 
         :address              => 'smtp.gmail.com',
