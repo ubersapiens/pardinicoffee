@@ -16,7 +16,7 @@ class Web < Sinatra::Base
   post '/shop.html' do 
     require 'pony'
     Pony.mail(
-      :from => params[:email],
+      :from => params[:address],
       :to => 'pardinicoffee@gmail.com',
       :subject => "RE: Coffee needed by " + params[:name],
       :body => params[:name] + " liked the following coffee: " + params[:coffee] + ". And would like " + params[:bags] + " bags delivered to them.",
