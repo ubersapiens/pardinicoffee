@@ -16,10 +16,30 @@ class Web < Sinatra::Base
   post '/shop.html' do 
     require 'pony'
     Pony.mail(
-      :from => params[:address],
+      :from => params[:email_address],
       :to => 'pardinicoffee@gmail.com',
       :subject => "RE: Coffee needed by " + params[:name],
-      :body => params[:name] + " liked the following coffee: " + params[:coffee] + ". And would like " + params[:bags] + " bags delivered to them.",
+      :body => params[:name] + " liked the following coffee: " + params[:coffee] + ". And would like " + params[:bags] + " bags delivered to them. Their email is: " + params[:email_address],
+      :via => :smtp,
+      :via_options => { 
+        :address              => 'smtp.gmail.com',
+        :port           => '587',
+        :enable_starttls_auto => true, 
+        :user_name => ENV['GMAIL_USERNAME'],
+        :password => ENV['GMAIL_PASSWORD'],
+        :authentication       => :plain, 
+        :domain               => 'localhost.localdomain'
+      })
+    redirect '/index.html' 
+  end
+
+  post '/french/shop.html' do 
+    require 'pony'
+    Pony.mail(
+      :from => params[:email_address],
+      :to => 'pardinicoffee@gmail.com',
+      :subject => "RE: Coffee needed by " + params[:name],
+      :body => params[:name] + " liked the following coffee: " + params[:coffee] + ". And would like " + params[:bags] + " bags delivered to them. Their email is: " + params[:email_address],
       :via => :smtp,
       :via_options => { 
         :address              => 'smtp.gmail.com',
