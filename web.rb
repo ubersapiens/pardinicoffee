@@ -19,7 +19,7 @@ class Web < Sinatra::Base
       :from => params[:email_address],
       :to => 'pardinicoffee@gmail.com',
       :subject => 'RE: Coffee needed by ' + params[:name],
-      :body => 'A bag of amazing coffee has been ordered by' + params[:email_address] + '. Add the client\'s information to Pardini Co. sales sheet. And get ready to make some awesome coffee!',
+      :body => 'A bag of amazing coffee has been ordered by ' + params[:email_address] + '. Add the client\'s information to Pardini Co. sales sheet. And get ready to make some awesome coffee!',
       :via => :smtp,
       :via_options => { 
         :address              => 'smtp.gmail.com',
@@ -39,7 +39,7 @@ class Web < Sinatra::Base
       :from => params[:email_address],
       :to => 'pardinicoffee@gmail.com',
       :subject => 'RE: Coffee needed by ' + params[:name],
-      :body => 'A bag of amazing coffee has been ordered by' + params[:email_address] + '. Add the client\'s information to Pardini Co. sales sheet. And get ready to make some awesome coffee!',
+      :body => 'A bag of amazing coffee has been ordered by ' + params[:email_address] + '. Add the client\'s information to Pardini Co. sales sheet. And get ready to make some awesome coffee!',
       :via => :smtp,
       :via_options => { 
         :address              => 'smtp.gmail.com',
