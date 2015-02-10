@@ -30,7 +30,7 @@ class Web < Sinatra::Base
         :authentication       => :plain, 
         :domain               => 'localhost.localdomain'
       })
-    redirect '/index.html' 
+    redirect '/thank_you.html' 
   end
 
   post '/french/shop.html' do 
@@ -50,6 +50,6 @@ class Web < Sinatra::Base
         :authentication       => :plain, 
         :domain               => 'localhost.localdomain'
       })
-    redirect '/index.html' 
+    redirect '/thank_you.html' 
   end
 end
