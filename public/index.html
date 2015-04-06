@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pardini Coffee Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="shortcut icon" href="http://cdn.flaticon.com/png/256/31809.png">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="/javascript/jquery.js"></script>
+  </head>
+  <body>
+    <div class="section values" style="margin-top:-1.5em;">
+      <div class="container">
+        <div class="row" style="margin-top: 4em;">
+          <div class="one-third column value"> 
+            <div class="imgWrap" id="imgWrap_exception"> 
+              <a href="/about.html">
+                <img src="/images/main_logo.jpg" id="image_resize">
+                <p class="imgDescription" style="margin-bottom:0px;"><span id="hello_fader">Hi.</span></p>
+              </a>
+            </div>
+          </div>
+          <div class="one-third column value"> 
+            <div class="imgWrap2"> 
+              <a href="/farm.html">
+                <img src="/images/farm.jpg" id="image_resize">
+                <p class="imgDescription2" style="margin-bottom:0px;">Farm.</p>
+              </a>
+            </div>
+          </div>
+          <div class="one-third column value"> 
+            <div class="imgWrap3"> 
+              <a href="/coffee.html">
+                <img src="/images/coffee.jpg" id="image_resize">
+                <p class="imgDescription3" style="margin-bottom:0px;">Coffee.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 2rem;" id="mobile_row">
+          <div class="one-third column value" id="mobile_row"> 
+            <div class="imgWrap4"> 
+              <a href="/roast.html">
+                <img src="/images/roast.jpg" id="image_resize">
+                <p class="imgDescription4" style="margin-bottom:0px;">Roast.</p>
+              </a>
+            </div>
+          </div>
+          <div class="one-third column value"> 
+            <div class="imgWrap5"> 
+              <a href="/shop.html">
+                <img src="/images/shop.jpg" id="image_resize">
+                <p class="imgDescription5" style="margin-bottom:0px;">Shop.</p>
+              </a>
+            </div>
+          </div>
+          <div class="one-third column value"> 
+            <div class="imgWrap6"> 
+              <a href="/blog.html">
+                <img src="/images/blog.jpg" id="image_resize">
+                <p class="imgDescription6" style="margin-bottom:0px;">Blog.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="one column value"> 
+        <p style="float: left;padding-left: 10em;"><a href="/french/index.html" style="text-decoration:none; color:black;">Francais</a></p>
+        <p style="float: right;padding-right: 10em;"><a href="http://www.twitter.com/pardinicoffee" style="text-decoration:none; color:black;">Twitter</a></p>
+        <p style="float: right;padding-right: 2em;"><a href="mailto:pardinicoffee@gmail.com" style="text-decoration:none; color:black;">Email</a></p>
+        <p style="float: right;padding-right: 2em;"><a href="http://www.facebook.com/pardinicoffeecompany" style="text-decoration:none; color:black;">Facebook</a></p>
+      </div>
+    </footer>
+    <script>
+      (function( $ ){
+
+        var words = [
+        'Hi.',
+        'Hola.',
+        'Bonjour.',
+        'Ciao.',
+        '今日は.',
+        'привет.'
+        ], i = 0;
+
+        setInterval(function(){
+            $('#hello_fader').fadeOut(function(){
+                $(this).html(words[i=(i+1)%words.length]).fadeIn();
+            });
+           // 2 seconds
+        }, 2000);
+        $(".imgWrap").hover(function(){
+          $(".image_resize").css("opacity","0"),
+          $(".imgDescription").css("opacity","1");
+        }, function(){
+          $(".image_resize").css("opacity","1"),
+          $(".imgDescription").css("opacity","0");
+        });
+        $(".imgWrap2").hover(function(){
+          $(".image_resize").css("opacity","0"),
+          $(".imgDescription2").css("opacity","1");
+        }, function(){
+          $(".image_resize").css("opacity","1"),
+          $(".imgDescription2").css("opacity","0");
+        });  
+        $(".imgWrap3").hover(function(){
+          $(".image_resize").css("opacity","0"),
+          $(".imgDescription3").css("opacity","1");
+        }, function(){
+          $(".image_resize").css("opacity","1"),
+          $(".imgDescription3").css("opacity","0");
+        }); 
+        $(".imgWrap4").hover(function(){
+          $(".image_resize").css("opacity","0"),
+          $(".imgDescription4").css("opacity","1");
+        }, function(){
+          $(".image_resize").css("opacity","1"),
+          $(".imgDescription4").css("opacity","0");
+        }); 
+        $(".imgWrap5").hover(function(){
+          $(".image_resize").css("opacity","0"),
+          $(".imgDescription5").css("opacity","1");
+        }, function(){
+          $(".image_resize").css("opacity","1"),
+          $(".imgDescription5").css("opacity","0");
+        });
+        $(".imgWrap6").hover(function(){
+          $(".image_resize").css("opacity","0"),
+          $(".imgDescription6").css("opacity","1");
+        }, function(){
+          $(".image_resize").css("opacity","1"),
+          $(".imgDescription6").css("opacity","0");
+        });
+      })( jQuery );
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58768286-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
