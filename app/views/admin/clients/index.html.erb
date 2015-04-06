@@ -1,0 +1,24 @@
+<%= link_to "Add a new Client", new_admin_client_path %>
+<table class="table">
+  <caption>Clients in the database.</caption>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th>Coffee</th>
+      <th>Order Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @clients.each do |c| %>
+    <tr>
+      <td><%= c.first_name %></td>
+      <td><%= c.full_street_address %></td>
+      <td><%= c.email %></td>
+      <td><%= c.coffee_selected %></td>
+      <td><%= c.created_at %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
