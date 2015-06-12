@@ -1,5 +1,5 @@
 class Admin::ClientsController < ApplicationController
-  http_basic_authenticate_with :name => "ubersapiens", :password => "bearcave", :except => [:new, :create]
+  http_basic_authenticate_with :name => "ubersapiens", :password => "bearcave"
   def index
     @clients = Client.all
 
