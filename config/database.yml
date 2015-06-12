@@ -5,7 +5,7 @@ development:
   username: JFP
   password: 
 
-development:
+production:
   adapter: postgresql
   encoding: utf8
   database: coffeecompany
