@@ -4,3 +4,10 @@ development:
   database: coffeecompany
   username: JFP
   password: 
+
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: coffeecompany
+  username: JFP
+  password: 
